@@ -23,7 +23,7 @@ return [
             'resources' => [
                 'Book' => [
                     'type'=>'books',
-                    'methods' => ['GET', 'POST', 'PATCH'],
+                    'methods' => ['GET', 'POST', 'PATCH', 'DELETE'],
                     'exposedRelations' => [
                         'book_i18ns'=>'book_i18ns',
                         'authors'=>'authors',
