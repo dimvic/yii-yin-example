@@ -1,3 +1,0 @@
-[submodule "protected/modules/api"]
-	path = protected/modules/api
-	url = https://github.com/dimvic/yii-yin.git

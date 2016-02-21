@@ -1,28 +1,28 @@
-# Example project for the yii-yin module 
+# Example project for yii-yin
 
 Example project for [yii-yin](https://github.com/dimvic/yii-yin).
 
+Setup in less than a minute, uses sqlite for db, fully functional.
 ## Installation
 
 ```
-git clone https://github.com/dimvic/yii-yin-example.git
-cd yii-yin-example
-git submodule init
-git submodule update
-composer install
-protected/yiic migrate
+$ git clone https://github.com/dimvic/yii-yin-example.git
+$ cd yii-yin-example
+$ curl -sS https://getcomposer.org/installer | php -- --install-dir=. --filename=composer
+$ ./composer install
+$ protected/yiic migrate
 ```
 
 ## Sample queries
 
 ### GET
 ```
-curl -XGET 'http://v/yii-yin-example/api/books/1'
+curl -XGET 'http://localhost/yii-yin-example/api/books/1'
 ```
 
 ### POST
 ```
-curl -XPOST 'http://v/yii-yin-example/api/books' -d '{
+curl -XPOST 'http://localhost/yii-yin-example/api/books' -d '{
     "data": {
         "type": "books",
         "attributes": {
@@ -34,7 +34,7 @@ curl -XPOST 'http://v/yii-yin-example/api/books' -d '{
 ```
 
 ```
-curl -XPOST 'http://v/yii-yin-example/api/books' -d '{
+curl -XPOST 'http://localhost/yii-yin-example/api/books' -d '{
     "data": {
         "type": "books",
         "attributes": {
@@ -67,7 +67,7 @@ curl -XPOST 'http://v/yii-yin-example/api/books' -d '{
 
 ### PATCH
 ```
-curl -XPATCH 'http://v/yii-yin-example/api/books/2' -d '{
+curl -XPATCH 'http://localhost/yii-yin-example/api/books/2' -d '{
     "data": {
         "type": "books",
         "id": "2",
@@ -93,4 +93,10 @@ curl -XPATCH 'http://v/yii-yin-example/api/books/2' -d '{
         }
     }
 }'
+```
+
+### DELETE
+
+```
+curl -XDELETE 'http://localhost/yii-yin-example/api/books/1'
 ```
