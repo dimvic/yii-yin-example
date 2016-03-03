@@ -4,18 +4,8 @@
     "config": {
         "vendor-dir": "protected/vendor"
     },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/dimvic/yii_yin"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/woohoolabs/yin"
-        }
-    ],
     "require": {
-        "yiisoft/yii": "~1.1.16",
+        "yiisoft/yii": "~1.1.17",
         "dimvic/yiiyin": "dev-master"
     }
 }
